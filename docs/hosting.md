@@ -21,7 +21,7 @@ A documentation site is a few hundred kilobytes of static files with no secrets,
 
 ## Monitoring evidence
 
-The detection rules were run as scripts on sample logs. No live monitoring stack runs behind this Hub, because the laptop used for the project is too small for one. Evidence is shown as rule descriptions and test results, and the scripts are kept in a private repository. A real deployment would run monitoring on a small paid server.
+The detection rules were run as scripts on sample logs. No live monitoring stack runs behind this Hub, because the project did not need one. Evidence is shown as rule descriptions and test results, and the scripts are kept in a private repository. A real deployment would run monitoring on a small paid server.
 
 ## The vulnerable lab stays private
 
