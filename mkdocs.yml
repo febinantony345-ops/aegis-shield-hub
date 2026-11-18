@@ -1,0 +1,21 @@
+site_name: Aegis Shield Security Hub
+site_url: https://febinantony345-ops.github.io/aegis-shield-hub/
+site_description: Fictional training project - security findings, risks, policies and detections for Aura Workforce
+theme:
+  name: material
+  features:
+    - navigation.top
+    - search.suggest
+    - content.code.copy
+nav:
+  - Home: index.md
+  - Executive summary: executive-summary.md
+  - Findings: findings.md
+  - Risk register: risk-register.md
+  - Policies: policies.md
+  - Detections: detections.md
+  - Hosting options: hosting.md
+  - About this Hub: about.md
+markdown_extensions:
+  - tables
+  - admonition
