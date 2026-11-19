@@ -15,6 +15,33 @@ The register holds **22 risks**: 8 Critical, 11 High and 3 Medium. Each risk is 
 | 4th | R-02 SQL injection (20) | Gives admin access with no password. Attempts reached the app in the log review. | Parameterised queries everywhere, scan with 0 injection findings, encrypt Restricted columns | Development lead | 27 Nov 2026 |
 | 5th | R-01 IDOR (20) | Any employee can read a colleague's salary by changing an ID. Proven in the practice lab. | Server checks ownership on every request. 10 "access denied" tests pass on every build. | Development lead | 27 Nov 2026 |
 
+## Remediation status (19 November 2026)
+
+The five top risks were fixed in lab copies. Each fix was then tested again with the same check used before it. Scores are unchanged: they drop only after the fix is built and tested on Aura Workforce itself.
+
+| Risk | Status | Result of the retest | Still open |
+|---|---|---|---|
+| R-19 Leavers and shared accounts | Fixed in lab copy, retest passed | The access review was rerun on a copy of the data. Leaver, shared and dormant accounts went from 13 to 0. | Named replacement accounts still have to be created. Not yet done on Aura. |
+| R-17 No MFA | Fixed in lab copy, retest passed | MFA gaps on Admin, HR and Finance accounts went from 23 to 0 in the review copy. Enrolment was simulated. | MFA is not enforced on Aura yet. Most other accounts still have no MFA. |
+| R-04 Brute force | Partly mitigated | Repeated wrong passwords at the practice login are now refused by a rate limit in front of the lab, and the limit clears after a short wait. | The limit is per address, not per account. The policy asks for a per-account lockout. |
+| R-02 SQL injection | Fixed in lab copy, retest passed | A crafted login that got in before the fix is refused after it. | Proven on one route. The code scan is the wider evidence. Not yet on Aura. |
+| R-01 IDOR | Fixed in lab copy, retest passed | Reading a colleague's payslip was allowed before and is refused after, unless the person is the owner or HR. HR keeps the access its job needs. | Not yet on Aura. |
+
+### Regression checklist
+
+Run before every release. A release is blocked if any check fails.
+
+1. A crafted login attempt is refused with a plain failure and no database error text.
+2. Code scans show no injection findings, and all database queries use safe parameters.
+3. Payslip pages need a login.
+4. An employee cannot open another employee's payslip, and can still open their own.
+5. HR can still open any payslip.
+6. Admins cannot open other people's payslips, as the access matrix says.
+7. Repeated wrong passwords are refused at the login.
+8. The refusal clears after a short wait, so nobody is locked out for good.
+9. The monthly access review shows no active leaver, shared or dormant accounts.
+10. The monthly access review shows MFA on every Admin, HR, Payroll and Finance account.
+
 ## How five risks with the same score were ranked
 
 1. **Proof first:** a risk with real evidence of misuse (an actual login or a successful attack) comes first. A risk with only failed attempts or lab evidence comes later.

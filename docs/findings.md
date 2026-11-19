@@ -41,6 +41,10 @@ These were found by hand because a passive scan cannot see them. Details are kep
 
 Each of these is tracked in the [risk register](risk-register.md) with an owner and a due date.
 
+### Status after the remediation sprint
+
+The matching register risks for access control (R-01), login bypass (R-02) and missing lockout (R-04) were fixed or reduced in lab copies and tested again. The other items above are still open. See the [remediation status](risk-register.md#remediation-status-19-november-2026) for what each fix proved and what is still open.
+
 ## Scanner versus manual testing
 
 | Where the scanner helped | Where the scanner failed |
