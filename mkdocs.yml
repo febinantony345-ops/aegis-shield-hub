@@ -10,6 +10,7 @@ theme:
 nav:
   - Home: index.md
   - Executive summary: executive-summary.md
+  - Deliverables index: deliverables.md
   - Findings: findings.md
   - Risk register: risk-register.md
   - Policies: policies.md
