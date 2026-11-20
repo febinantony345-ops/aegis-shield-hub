@@ -13,9 +13,11 @@ Every deliverable in the Aegis Shield programme for Aura Workforce, with its sta
 | 7 | Incident playbooks | Step-by-step plans for payroll breach, ransomware and insider salary leak | Complete | phase-3/docs/task15_incident_response |
 | 8 | Penetration test report | Results of the authorised test in Task 19 | Complete | phase-4/docs/task19_pentest_report |
 | 9 | Staff awareness guide | Two-page guide on phishing, passwords, MFA and reporting | Draft: official security contacts still to be confirmed | phase-4/docs/task20_handover |
-| 10 | Final recommendation | Go-live decision with evidence and remaining risk | In progress | Task 20 |
+| 10 | Final recommendation | Go-live decision with evidence and remaining risk | Complete. Verdict: not ready, with five gates that would change it | Project repository, tag v1.0.0 |
 | 11 | Consolidated report | Whole programme in one document | In progress | Task 20 |
+| 12 | Remediation and retest | Fixes tried on lab copies, with the same test before and after | Complete. Lab copies only, nothing applied to Aura yet | See [Risk register](risk-register.md) |
 
 ## Open items
 
 - Official security email and on-call number must be confirmed by Aura Workforce before the guide is published.
+- All fixes are proven on lab copies only. None has been applied to the real Aura Workforce system, so every risk is still open.
