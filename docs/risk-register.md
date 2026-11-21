@@ -22,7 +22,7 @@ The five top risks were fixed in lab copies. Each fix was then tested again with
 | Risk | Status | Result of the retest | Still open |
 |---|---|---|---|
 | R-19 Leavers and shared accounts | Fixed in lab copy, retest passed | The access review was rerun on a copy of the data. Leaver, shared and dormant accounts went from 13 to 0. | Named replacement accounts still have to be created. Not yet done on Aura. |
-| R-17 No MFA | Fixed in lab copy, retest passed | MFA gaps on Admin, HR and Finance accounts went from 23 to 0 in the review copy. Enrolment was simulated. | MFA is not enforced on Aura yet. Most other accounts still have no MFA. |
+| R-17 No MFA | Process proven only, retest passed on a copy | MFA gaps on Admin, HR and Finance accounts went from 23 to 0 in the review copy. Enrolment was simulated. | MFA is not enforced on Aura yet. Most other accounts still have no MFA. |
 | R-04 Brute force | Partly mitigated | Repeated wrong passwords at the practice login are now refused by a rate limit in front of the lab, and the limit clears after a short wait. | The limit is per address, not per account. The policy asks for a per-account lockout. |
 | R-02 SQL injection | Fixed in lab copy, retest passed | A crafted login that got in before the fix is refused after it. | Proven on one route. The code scan is the wider evidence. Not yet on Aura. |
 | R-01 IDOR | Fixed in lab copy, retest passed | Reading a colleague's payslip was allowed before and is refused after, unless the person is the owner or HR. HR keeps the access its job needs. | Not yet on Aura. |

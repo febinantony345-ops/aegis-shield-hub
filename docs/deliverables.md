@@ -14,7 +14,7 @@ Every deliverable in the Aegis Shield programme for Aura Workforce, with its sta
 | 8 | Penetration test report | Results of the authorised test in Task 19 | Complete | phase-4/docs/task19_pentest_report |
 | 9 | Staff awareness guide | Two-page guide on phishing, passwords, MFA and reporting | Draft: official security contacts still to be confirmed | phase-4/docs/task20_handover |
 | 10 | Final recommendation | Go-live decision with evidence and remaining risk | Complete. Verdict: not ready, with five gates that would change it | Project repository, tag v1.0.0 |
-| 11 | Consolidated report | Whole programme in one document | In progress | Task 20 |
+| 11 | Consolidated report | Whole programme in one document | Written. Final Challenge notes and demo link still to be added | Project repository, phase-4/docs/task20_handover |
 | 12 | Remediation and retest | Fixes tried on lab copies, with the same test before and after | Complete. Lab copies only, nothing applied to Aura yet | See [Risk register](risk-register.md) |
 
 ## Open items
